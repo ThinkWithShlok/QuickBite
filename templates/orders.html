@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My orders | QuickBite</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body data-page="orders">
+  <header class="site-header">
+    <a class="brand" href="/">Quick<span>Bite</span><small>GOOD FOOD, GOOD MOOD</small></a>
+    <nav><a href="/">Menu</a><a class="active" href="/orders">My orders</a><a href="/admin">Admin</a><a class="cart-link" href="/cart">Cart <span id="cart-count">0</span></a></nav>
+  </header>
+  <main class="narrow-page">
+    <p class="eyebrow">Good to see you again</p><h1>Your orders</h1>
+    <form id="orders-search" class="lookup-form"><label class="field-label" for="orders-name">Enter the name used at checkout</label><div class="inline-form"><input id="orders-name" class="text-input" required placeholder="Your name"><button class="button button-primary">Find orders</button></div></form>
+    <p id="orders-message" class="notice" role="status"></p>
+    <div id="orders-list" class="orders-list"></div>
+  </main>
+  <footer>QuickBite · Made with care, served with a smile.</footer>
+</body>
+</html>

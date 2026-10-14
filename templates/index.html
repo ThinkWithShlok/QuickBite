@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuickBite | Fresh food, fast</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body data-page="menu">
+  <header class="site-header">
+    <a class="brand" href="/">Quick<span>Bite</span><small>GOOD FOOD, GOOD MOOD</small></a>
+    <nav><a class="active" href="/">Menu</a><a href="/orders">My orders</a><a href="/admin">Admin</a><a class="cart-link" href="/cart">Cart <span id="cart-count">0</span></a></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div><p class="eyebrow">A little joy, delivered</p><h1>Good food.<br><span>Right on time.</span></h1><p>Freshly made favourites, delivered straight to your door.</p></div>
+      <div class="hero-art" aria-hidden="true">🍕<span>🍟</span><i>🥤</i></div>
+    </section>
+    <section class="menu-section">
+      <div class="section-heading"><div><p class="eyebrow">Made fresh for you</p><h2>Our menu</h2></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="food-search" type="search" placeholder="Search dishes..." aria-label="Search dishes"></label></div>
+      <p id="menu-message" class="notice" role="status"></p>
+      <div id="food-list" class="food-grid"></div>
+    </section>
+  </main>
+  <footer>QuickBite · Made with care, served with a smile.</footer>
+</body>
+</html>

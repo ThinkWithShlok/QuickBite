@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your cart | QuickBite</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body data-page="cart">
+  <header class="site-header">
+    <a class="brand" href="/">Quick<span>Bite</span><small>GOOD FOOD, GOOD MOOD</small></a>
+    <nav><a href="/">Menu</a><a href="/orders">My orders</a><a href="/admin">Admin</a><a class="cart-link active" href="/cart">Cart <span id="cart-count">0</span></a></nav>
+  </header>
+  <main class="narrow-page">
+    <p class="eyebrow">Almost there</p><h1>Your cart</h1>
+    <p id="cart-message" class="notice" role="status"></p>
+    <div id="cart-items" class="cart-items"></div>
+    <section id="checkout" class="checkout-card">
+      <div class="total-row"><span>Total</span><strong id="cart-total">₹0</strong></div>
+      <label class="field-label" for="customer-name">Your name</label>
+      <input id="customer-name" class="text-input" type="text" maxlength="80" placeholder="Enter your name">
+      <button id="place-order" class="button button-primary full-width">Place order</button>
+      <a class="back-link" href="/">← Continue shopping</a>
+    </section>
+  </main>
+  <footer>QuickBite · Made with care, served with a smile.</footer>
+</body>
+</html>
