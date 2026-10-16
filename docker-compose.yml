@@ -1,0 +1,9 @@
+services:
+  quickbite:
+    build: .
+    container_name: quickbite-compose
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./quickbite.db:/app/quickbite.db
+    restart: unless-stopped

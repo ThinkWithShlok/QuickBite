@@ -181,6 +181,7 @@ def update_order_status(order_id):
     return jsonify({"message": "Order status updated.", "status": status})
 
 
+init_db(app.config["DATABASE"])
+
 if __name__ == "__main__":
-    init_db(app.config["DATABASE"])
     app.run(debug=True)
