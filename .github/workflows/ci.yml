@@ -35,6 +35,14 @@ jobs:
         run: |
           python -m pytest
 
+      - name: Build Docker image
+        run: |
+          docker build -t quickbite .
+
+      - name: Validate Docker Compose configuration
+        run: |
+          docker compose config
+
       - name: Package application
         run: |
           zip -r quickbite-package.zip . \
